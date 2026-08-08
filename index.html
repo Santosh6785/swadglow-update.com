@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SWADGLOW™ — Pure Bihar, Packed with Pride</title>
-<meta name="description" content="SWADGLOW™ by Sehat Foods — Authentic Bihar food products. Sattu, Makhana, Chai-patti and Sabzi Mix Masala. FSSAI licensed. Coming soon to your doorstep.">
+<meta name="description" content="SWADGLOW™ by Sehat Foods — Authentic Bihar food products. Buy Sattu, Makhana, Chai-patti and Sabzi Mix Masala online. FSSAI licensed. Pure & Natural. Made in Patna, Bihar.">
 <meta property="og:title" content="SWADGLOW™ — Pure Bihar, Packed with Pride">
-<meta property="og:description" content="Authentic Bihar food products — Sattu, Makhana, Chai-patti, Masala. FSSAI licensed. Coming soon.">
+<meta property="og:description" content="Authentic Bihar food products — Sattu, Makhana, Chai-patti, Masala. FSSAI licensed. Pure & Natural. Order on WhatsApp.">
 <meta property="og:url" content="https://www.swadglow.in">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -184,7 +184,7 @@
     box-shadow: 0 4px 16px rgba(123,28,43,0.1);
   }
 
-  /* ── INSTAGRAM SECTION ── */
+  /* ── INSTAGRAM ── */
   .insta-section {
     background: var(--cream);
     padding: 60px 40px;
@@ -393,10 +393,73 @@
 
   .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 24px;
-    max-width: 960px;
+    max-width: 1100px;
     margin: 0 auto;
+  }
+
+  .usage-toggle {
+    display: inline-block;
+    margin-top: 14px;
+    background: transparent;
+    color: var(--maroon);
+    border: 1px solid var(--maroon);
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .usage-toggle:hover {
+    background: var(--maroon);
+    color: var(--white);
+  }
+
+  .usage-panel {
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(200,146,42,0.25);
+  }
+
+  .usage-panel.open { display: block; }
+
+  .usage-tip {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(200,146,42,0.12);
+  }
+
+  .usage-tip:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+  }
+
+  .usage-tip-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--maroon);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .usage-tip-text {
+    font-size: 13px;
+    color: var(--text-soft);
+    line-height: 1.7;
+  }
+
+  .usage-tip-text em {
+    color: var(--gold);
+    font-style: normal;
+    font-weight: 600;
   }
 
   .product-card {
@@ -678,6 +741,66 @@
 
 .prev { left: 10px; }
 .next { right: 10px; }
+  /* ── OUR STORY ── */
+  .story {
+    background: var(--cream);
+    padding: 80px 40px;
+  }
+
+  .story-inner {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .story-body {
+    font-size: 15px;
+    color: var(--text-soft);
+    line-height: 1.9;
+    margin-bottom: 40px;
+    font-weight: 300;
+  }
+
+  .story-body strong {
+    color: var(--maroon);
+    font-weight: 600;
+  }
+
+  .story-values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .story-value {
+    background: var(--white);
+    border: 1px solid rgba(200,146,42,0.2);
+    border-radius: 8px;
+    padding: 24px 16px;
+    text-align: center;
+  }
+
+  .story-value-icon {
+    font-size: 28px;
+    margin-bottom: 10px;
+    display: block;
+  }
+
+  .story-value-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--maroon);
+    margin-bottom: 6px;
+  }
+
+  .story-value-text {
+    font-size: 12px;
+    color: var(--text-soft);
+    line-height: 1.5;
+  }
+
   /* ── SOCIAL ICONS ── */
   .social-row {
     display: flex;
@@ -788,6 +911,26 @@
       <span class="product-badge">High Protein · Iron Rich</span>
       <div class="product-mrp">MRP ₹70</div>
       <a href="https://wa.me/919523780626?text=Hi%2C%20I%20want%20to%20order%20SWADGLOW%20Sattu%20500g" class="btn-order" target="_blank">Order on WhatsApp</a>
+      <br>
+      <button class="usage-toggle" onclick="document.getElementById('usage-sattu').classList.toggle('open')">How to Use ▾</button>
+      <div class="usage-panel" id="usage-sattu">
+        <div class="usage-tip">
+          <div class="usage-tip-title">🥤 Sattu Sharbat</div>
+          <p class="usage-tip-text">Mix <em>2 tablespoons</em> of SWADGLOW Sattu in a glass of cold water. Add a pinch of salt, a squeeze of lemon, and a pinch of roasted cumin powder. Stir well and drink. Perfect summer coolant — naturally energising and protein-rich.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🫓 Sattu Paratha</div>
+          <p class="usage-tip-text">Mix <em>4 tablespoons</em> of sattu with finely chopped onion, green chilli, ginger, ajwain, salt, and a few drops of mustard oil. Fill the mixture into wheat dough balls and roll into parathas. Cook on a hot tawa with ghee until golden. Bihar's most loved breakfast.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🍱 Sattu Litti</div>
+          <p class="usage-tip-text">Prepare sattu filling with chopped onion, green chilli, garlic, pickle oil, salt, and lemon. Stuff into wheat dough balls and bake over charcoal or in an oven at 200°C for 25 minutes. Serve hot with baingan chokha and ghee. The soul of Bihar on a plate.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">💪 Protein Supplement</div>
+          <p class="usage-tip-text">Mix <em>3 tablespoons</em> of sattu in a glass of cold milk with a teaspoon of honey. Blend and drink post-workout. A natural, chemical-free alternative to commercial protein shakes.</p>
+        </div>
+      </div>
     </div>
 
     <div class="product-card">
@@ -798,6 +941,22 @@
       <span class="product-badge">Assam CTC · Premium Blend</span>
       <div class="product-mrp">MRP ₹95</div>
       <a href="https://wa.me/919523780626?text=Hi%2C%20I%20want%20to%20order%20SWADGLOW%20Chai-patti%20250g" class="btn-order" target="_blank">Order on WhatsApp</a>
+      <br>
+      <button class="usage-toggle" onclick="document.getElementById('usage-chai').classList.toggle('open')">How to Use ▾</button>
+      <div class="usage-panel" id="usage-chai">
+        <div class="usage-tip">
+          <div class="usage-tip-title">☕ Bihar-Style Doodh Chai</div>
+          <p class="usage-tip-text">Boil <em>100ml water</em> in a pan. Add <em>1 teaspoon</em> (approx. 3g) of SWADGLOW Chai-patti. Brew on medium flame for 2 minutes until the water turns deep reddish-brown. Add <em>150ml full-fat milk</em> and sugar to taste. Boil together for 5–6 minutes on low flame, stirring occasionally. Strain and serve.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🌿 Adrak Chai</div>
+          <p class="usage-tip-text">Follow the same method above. Add a small piece of freshly crushed ginger to the water before adding tea leaves. Let it simmer together. Ideal for monsoon and winter mornings.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🫙 Storage Tip</div>
+          <p class="usage-tip-text">Once opened, store in an <em>airtight container</em> away from spices, onions, and strong odours. Keep in a cool, dry place away from direct sunlight. Best consumed within 3 months of opening.</p>
+        </div>
+      </div>
     </div>
 
     <div class="product-card">
@@ -808,6 +967,26 @@
       <span class="product-badge">Mithila Origin · Low Calorie</span>
       <div class="product-mrp">MRP ₹155</div>
       <a href="https://wa.me/919523780626?text=Hi%2C%20I%20want%20to%20order%20SWADGLOW%20Makhana%20100g" class="btn-order" target="_blank">Order on WhatsApp</a>
+      <br>
+      <button class="usage-toggle" onclick="document.getElementById('usage-makhana').classList.toggle('open')">How to Use ▾</button>
+      <div class="usage-panel" id="usage-makhana">
+        <div class="usage-tip">
+          <div class="usage-tip-title">🍿 Roasted Snack</div>
+          <p class="usage-tip-text">Heat <em>1 teaspoon of ghee</em> in a heavy-bottomed pan on low flame. Add SWADGLOW Makhana and roast for 8–10 minutes, stirring continuously, until crisp and light golden. Sprinkle rock salt, black pepper, and chaat masala. Cool before storing.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🍚 Makhana Kheer</div>
+          <p class="usage-tip-text">Lightly roast makhana in ghee, then crush roughly. Boil <em>500ml full-fat milk</em> and add the crushed makhana. Simmer on low flame for 15 minutes until the milk thickens. Add sugar, cardamom powder, and saffron. Garnish with chopped pistachios.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🥛 Makhana Raita</div>
+          <p class="usage-tip-text">Roast makhana until crisp. Mix into fresh curd with salt, roasted cumin powder, and chopped coriander. Serve chilled as a side dish with dal-rice or paratha.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">⚡ Fasting Food</div>
+          <p class="usage-tip-text">Makhana is a popular and ideal food during Navratri, Ekadashi, and other fasting days. Light to digest, naturally gluten-free. Roast with sendha namak and ghee for a satisfying vrat snack.</p>
+        </div>
+      </div>
     </div>
 
     <div class="product-card">
@@ -818,6 +997,26 @@
       <span class="product-badge">16 Spices · No Artificial Colour</span>
       <div class="product-mrp">MRP ₹36 / ₹62</div>
       <a href="https://wa.me/919523780626?text=Hi%2C%20I%20want%20to%20order%20SWADGLOW%20Sabzi%20Mix%20Masala" class="btn-order" target="_blank">Order on WhatsApp</a>
+      <br>
+      <button class="usage-toggle" onclick="document.getElementById('usage-masala').classList.toggle('open')">How to Use ▾</button>
+      <div class="usage-panel" id="usage-masala">
+        <div class="usage-tip">
+          <div class="usage-tip-title">🥔 Aloo Sabzi</div>
+          <p class="usage-tip-text">Heat oil in a pan. Add cumin seeds and let them splutter. Add chopped onion and cook until golden. Add ginger-garlic paste and tomato, cook until oil separates. Add boiled or diced potatoes. Sprinkle <em>1–1.5 teaspoons</em> of SWADGLOW Sabzi Mix Masala, salt to taste, and a splash of water. Cover and cook for 5 minutes. Garnish with fresh coriander.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🫛 Mixed Vegetable Curry</div>
+          <p class="usage-tip-text">Use <em>2 teaspoons</em> of masala for a mixed vegetable curry with cauliflower, peas, carrot, and beans. Follow the same base — onion, tomato, ginger-garlic — then add vegetables, masala, and water. Cover and cook until tender.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🍳 Everyday Use</div>
+          <p class="usage-tip-text">Use <em>½ to 1 teaspoon</em> per serving for everyday sabzi. Balanced for regular cooking — no need to add extra coriander, cumin, or turmeric separately.</p>
+        </div>
+        <div class="usage-tip">
+          <div class="usage-tip-title">🫙 Storage Tip</div>
+          <p class="usage-tip-text">Store in a cool, dry place away from moisture and direct sunlight. Keep the pack sealed after use. Best consumed within <em>3 months of opening</em>.</p>
+        </div>
+      </div>
     </div>
 
   </div>
@@ -843,6 +1042,42 @@
       <span class="why-icon">✅</span>
       <div class="why-title">Clean Label</div>
       <p class="why-text">No artificial colours, flavours, or MSG. What you see on the label is exactly what's inside the pack.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story">
+  <div class="story-inner">
+    <p class="section-label">Our Story</p>
+    <h2 class="section-title">Born from the heart of Bihar</h2>
+    <p class="story-body">
+      SWADGLOW™ was born from a simple belief — <strong>Bihar deserves its own brand.</strong><br><br>
+      For generations, Bihar's kitchens have been filled with the aroma of freshly ground sattu, the crunch of roasted makhana, the warmth of strong Assam chai, and the everyday magic of hand-blended masala. Yet most packaged food on shop shelves came from outside the state.<br><br>
+      <strong>M/s Sehat Foods</strong> was founded by Smt. Guria Devi and Smt. Reena Kumari — two women from Patna who decided to change that. From a small unit in Jalalpur, Dhanarua, they set out to bring Bihar's most-loved foods to every home — packed with care, licensed by FSSAI, and priced for everyone.<br><br>
+      <strong>SWADGLOW™</strong> — where <em>Swad</em> (taste) meets <em>Glow</em> (wellness). Bihar ka apna brand.
+    </p>
+    <div class="story-values">
+      <div class="story-value">
+        <span class="story-value-icon">👩‍🌾</span>
+        <div class="story-value-title">Women-led</div>
+        <p class="story-value-text">Founded and run by women entrepreneurs from Patna, Bihar.</p>
+      </div>
+      <div class="story-value">
+        <span class="story-value-icon">🏭</span>
+        <div class="story-value-title">Made in Bihar</div>
+        <p class="story-value-text">Manufactured at our FSSAI licensed unit in Jalalpur, Dhanarua.</p>
+      </div>
+      <div class="story-value">
+        <span class="story-value-icon">🌿</span>
+        <div class="story-value-title">Pure & Natural</div>
+        <p class="story-value-text">No artificial colours, flavours, or MSG in any of our products.</p>
+      </div>
+      <div class="story-value">
+        <span class="story-value-icon">🤝</span>
+        <div class="story-value-title">Local Roots</div>
+        <p class="story-value-text">Makhana and Sattu sourced directly from Bihar's farmers.</p>
+      </div>
     </div>
   </div>
 </section>
